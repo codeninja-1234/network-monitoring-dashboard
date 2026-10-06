@@ -1,0 +1,80 @@
+{
+  "annotations": {
+    "list": []
+  },
+  "editable": true,
+  "graphTooltip": 0,
+  "panels": [
+    {
+      "type": "timeseries",
+      "title": "CPU Usage",
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 0
+      },
+      "targets": [
+        {
+          "expr": "system_cpu_usage_percent",
+          "legendFormat": "CPU %"
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "Memory Usage",
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 0
+      },
+      "targets": [
+        {
+          "expr": "system_ram_usage_percent",
+          "legendFormat": "RAM %"
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "Network Throughput",
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 8
+      },
+      "targets": [
+        {
+          "expr": "network_upload_bytes_per_second",
+          "legendFormat": "Upload bytes/s"
+        },
+        {
+          "expr": "network_download_bytes_per_second",
+          "legendFormat": "Download bytes/s"
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "Website Availability",
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 8
+      },
+      "targets": [
+        {
+          "expr": "website_up",
+          "legendFormat": "{{website}}"
+        }
+      ]
+    }
+  ],
+  "schemaVersion": 39,
+  "title": "Network Monitoring",
+  "version": 1
+}

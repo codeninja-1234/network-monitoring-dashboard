@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Network Monitoring Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<main class="container">
+  <header>
+    <h1>🌐 Network Monitoring Dashboard</h1>
+    <p>Real-time system, network and website health monitoring</p>
+    <span id="health" class="health">Checking service...</span>
+  </header>
+
+  <section class="cards">
+    <div class="card"><h2>🖥 CPU</h2><p id="cpu">--</p></div>
+    <div class="card"><h2>🧠 RAM</h2><p id="ram">--</p></div>
+    <div class="card"><h2>💾 Disk</h2><p id="disk">--</p></div>
+    <div class="card"><h2>⏱ Uptime</h2><p id="uptime">--</p></div>
+    <div class="card"><h2>📤 Upload</h2><p id="upload">--</p></div>
+    <div class="card"><h2>📥 Download</h2><p id="download">--</p></div>
+    <div class="card"><h2>📡 Latency</h2><p id="latency">--</p></div>
+    <div class="card"><h2>🌐 IP Address</h2><p id="ip">--</p></div>
+  </section>
+
+  <section class="panel">
+    <h2>📈 Live CPU Usage</h2>
+    <canvas id="cpuChart"></canvas>
+  </section>
+
+  <section class="panel">
+    <div class="panel-header">
+      <h2>🌍 Website Health</h2>
+      <span id="lastChecked">--</span>
+    </div>
+    <div id="websites" class="website-grid"></div>
+  </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{{ url_for('static', filename='charts.js') }}"></script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
